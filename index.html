@@ -1,0 +1,102 @@
+<html>
+   <head> 
+       <link rel="stylesheet" type="text/css" href="css/style.css">
+       <link rel="icon" href="img/frog.png" type="image/png">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link href="https://db.onlinewebfonts.com/c/7cc6719bd5f0310be3150ba33418e72e?family=Comic+Sans+MS" rel="stylesheet">
+    </head>
+    <title> Lin Xiaofei Giydirme Oyunu </title>
+<body>
+    <div id="container">
+    <div id="background">
+    <div id="left-image"></div>
+    <div id="right-image"></div>        
+    <div id="hair"></div>    
+    <div id="man"> </div>
+    <div id="shoes"> </div>    
+    <div id="clothes"> </div>
+    <div id="hairback"> </div>
+    </div>
+
+    <!-- Popup content -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2 id="popup-title"> Welcome to Lin Xiaofei Giydirme Oyunu! </h2>
+      <p>On the day of September 25th of 2024, I asked you if you'd want me to code a game for you. You requested a dress-up game so it is my duty to deliver.
+        I suck at drawing so I kind of stole the assets from the internet. You wanted a category for makeup as well, sorry I couldn't deliver that, but I think you'd enjoy drawing them yourself!
+        This website is pretty easy to implement as long as you have the drawings. Feel free to add as many categories as you want, if you want to draw anything, that is.
+        OH and I made this website compatible with smaller screens as well so you can visit it using your phone too!!!</p>
+      <p>Happy 21st birthday! I love you!</p>
+      <p>(Of course I used comic sans.)</p>
+      <img src="img/kiss.gif" alt="Cool GIF" class="popup-gif">
+      <button id="close-popup">Close</button>
+    </div>
+  </div>
+    
+    <div id="buttons" class="buttons">
+        <button id="hair-button" class="button" onclick="hair()">
+            <img src="img/hair.png" alt="Hair" > 
+        </button>
+
+        <button id="outfit-button" class="button" onclick="outfit()">
+            <img src="img/outfit.png" alt="Outfit"> 
+        </button>
+
+        <button id="shoes-button" class="button" onclick="shoes()">
+            <img src="img/shoes.png" alt="Shoes"> 
+        </button>
+    </div>
+
+        <!-- Category Specific Buttons (Initially Hidden) -->
+        <div id="hair-options" class="category-options" style="display: none;">
+            <button class="close-button" onclick="closeMenu('hair-options')">
+                <img src="img/close-icon.png" alt="Close">
+            </button>
+            <button class="category-button" onclick="selectHairOption('hair1')">
+                <img src="img/hair1.png" alt="Hair Option 1">
+            </button>
+            <button class="category-button" onclick="selectHairOption('hair2')">
+                <img src="img/hair2.png" alt="Hair Option 2">
+            </button>
+            <button class="category-button" onclick="selectHairOption('hair3')">
+                <img src="img/hair3.png" alt="Hair Option 3">
+            </button>
+        </div>
+
+        <div id="outfit-options" class="category-options" style="display: none;">
+            <button class="close-button" onclick="closeMenu('outfit-options')">
+                <img src="img/close-icon.png" alt="Close">
+            </button>
+            <button class="category-button" onclick="selectOutfitOption('dress1')">
+                <img src="img/outfit1.png" alt="Outfit Option A">
+            </button>
+            <button class="category-button" onclick="selectOutfitOption('dress2')">
+                <img src="img/outfit2.png" alt="Outfit Option B">
+            </button>
+            <button class="category-button" onclick="selectOutfitOption('dress3')">
+                <img src="img/outfit3.png" alt="Outfit Option C">
+            </button>
+        </div>
+
+        <div id="shoes-options" class="category-options" style="display: none;">
+            <button class="close-button" onclick="closeMenu('shoes-options')">
+                <img src="img/close-icon.png" alt="Close">
+            </button>
+            <button class="category-button" onclick="selectShoesOption('shoe1')">
+                <img src="img/shoe-icon1.png" alt="Shoes Style 1">
+            </button>
+            <button class="category-button" onclick="selectShoesOption('shoe2')">
+                <img src="img/shoe-icon2.png" alt="Shoes Style 2">
+            </button>
+            <button class="category-button" onclick="selectShoesOption('shoe3')">
+                <img src="img/shoe-icon3.png" alt="Shoes Style 3">
+            </button>
+        </div>
+    </div>
+    
+    
+    <script src="js/code.js"></script>
+    
+    </body>
+
+</html>
