@@ -1,0 +1,530 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    background-color: #f0f0f0;
+    margin: 0;
+    height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#container {
+    width: 100%; 
+    max-width: 1024px; 
+    height: 900px; 
+    background-color: orange;
+    position: relative;
+    background-image: url("../img/background.jpeg");
+    background-size: cover; 
+    background-position: center;
+}
+
+.button {
+    position: absolute;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; 
+    height: 80px;
+    background-color: transparent;
+    background-size: 80px 80px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    transition: all 0.3s ease; 
+  }
+
+  #hair-button {
+    top: 30px;
+    right: 83px;
+    background-image: url('../img/frame1.png'); 
+  }
+
+  #outfit-button {
+    top: 100px;  
+    right: 80px;
+    background-image: url('../img/frame2.png'); 
+  }
+
+  #shoes-button {
+    top: 170px;  
+    right: 80px;
+    background-image: url('../img/frame3.png'); 
+  }
+
+  .button img {
+    position: absolute; 
+  }
+
+  #hair-button img {
+    width: 30px;  
+    height: 30px; 
+    top: 28px;   
+    left: 25px;  
+  }
+
+  #outfit-button img {
+    width: 40px;  
+    height: 40px; 
+    bottom: 18px; 
+    right: 24px; 
+  }
+
+  #shoes-button img {
+    width: 35px;  
+    height: 30px; 
+    bottom: 30px; 
+    right: 23px;
+  }
+
+  .button:hover {
+    background-color: transparent; 
+    transform: scale(1.1); 
+  }
+
+#man{
+    position:absolute;
+    width:610px;
+    height:610px;
+    background-image: url("../img/body.png");
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    top: 50px; 
+    left: 100px; 
+    z-index: 1;
+}
+
+#hairback {
+  position:absolute;
+  width:610px;
+  height:610px;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  top: 50px; 
+  left: 100px; 
+  z-index: 0;
+}
+.hairback {
+  background-image: url("../img/hairback.png");
+}
+
+#hair {
+  position:absolute;
+  width:610px;
+  height:610px;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  top: 50px; 
+  left: 100px; 
+  z-index: 4;
+}
+
+.hair1 {
+  background-image: url("../img/hairfront1.png");
+}
+.hair2 {
+  background-image: url("../img/hairfront2.png");
+}
+.hair3 {
+  background-image: url("../img/hairfront3.png");
+}
+
+#clothes {
+  position:absolute;
+  width:610px;
+  height:610px;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  top: 50px; 
+  left: 100px; 
+  z-index: 3;
+}
+
+.dress1 {
+  background-image: url("../img/dress1.png");
+}
+.dress2 {
+  background-image: url("../img/dress2.png");
+}
+.dress3 {
+  background-image: url("../img/dress3.png");
+}
+
+#shoes {
+  position:absolute;
+  width:610px;
+  height:610px;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  top: 50px; 
+  left: 100px; 
+  z-index: 2;
+}
+
+.shoe1 {
+  background-image: url("../img/shoe1.png");
+}
+.shoe2 {
+  background-image: url("../img/shoe2.png");
+}
+.shoe3 {
+  background-image: url("../img/shoe3.png");
+}
+
+.category-options {
+    position: absolute;
+    top: 30px; 
+    right: 150px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+    background-color: rgba(255, 255, 255, 0.349);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    max-height: 50%; 
+    overflow-y: auto; 
+    z-index: 5;
+}
+
+.category-button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-button img {
+    width: 80px; 
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.category-button:hover img {
+    transform: scale(1.1);
+}
+
+.close-button {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.close-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.close-button:hover img {
+    transform: rotate(90deg); 
+}
+
+#left-image,
+#right-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px; 
+    background-size: cover;
+    background-position: center;
+}
+
+#left-image {
+    left: -210px; 
+    background-image: url('../img/img1.png'); 
+}
+
+#right-image {
+    right: -210px; 
+    background-image: url('../img/img2.png'); 
+}
+
+.popup {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.popup-content {
+  font-family: 'Comic Sans MS', sans-serif;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+  height: fit-content;
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-gif {
+  width: 40%; 
+  height: auto;
+  border-radius: 5px;
+}
+
+#popup-title {
+  font-size: 24px; 
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+#close-popup {
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+/* Portrait Orientation */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  #container {
+    width: 100%; 
+    height: 100vh; 
+    background-image: url("../img/new.png");
+  }
+
+  .button {
+    width: 2%; 
+    height: 2%;
+    background-size: 70%;
+  }
+  
+  #hair-button {
+    top: 32%;
+    left: 22.9%;
+    background-image: url("../img/hair-m.png");
+  }
+  
+  #outfit-button {
+    top: 36%;  
+    left: 23%;
+    background-image: url("../img/out-m.png");
+  }
+  
+  #shoes-button {
+    top: 40%;  
+    left: 23%;
+    background-image: url("../img/shoes-m.png");
+  }
+  
+  #man, #hairback, #hair, #clothes, #shoes {
+    width: 30%;
+    height: 30%;
+    top: 30%; 
+    left: 30%; 
+  }
+
+  .category-options {
+    top: 33%;  
+    right: 20%;  
+    transform: translateX(50);  
+    width: 10%; 
+    padding: 10px; 
+    max-height: 30%;  
+  }
+
+  .category-button {
+    width: 100%;
+    height: 100%;
+}
+
+  .category-button img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close-button {
+    width: 8px;
+    height: 8px;
+}
+  
+  #left-image, #right-image {
+    display: none;
+  }
+
+  .button img {
+    display: none; 
+  }
+
+  .popup-content {
+    width: 85%; 
+    padding: 10px;
+    font-size: 10px; 
+  }
+
+  .popup-gif {
+    width: 40%; 
+  }
+
+  #popup-title {
+    font-size: 15px; 
+  }
+
+  #close-popup {
+    padding: 6px; 
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+  #container {
+    width: 100%; 
+    height: 100vh; 
+    background-image: url("../img/new2.png");
+  }
+
+  #man, #hairback, #hair, #clothes, #shoes {
+    width: 70%;
+    height: 70%;
+    top: 10%; 
+    left: 10%; 
+  }
+
+  .button {
+    width: 5%; 
+    height: 5%;
+    background-size: 70%;
+    z-index: 10;
+  }
+  
+  #hair-button {
+    top: 12%;
+    right: 30%;
+    background-image: url("../img/hair-m.png");
+  }
+  
+  #outfit-button {
+    top: 19%;  
+    right: 29.8%;
+    background-image: url("../img/out-m.png");
+  }
+  
+  #shoes-button {
+    top: 26%;  
+    right: 30%;
+    background-image: url("../img/shoes-m.png");
+  }
+
+  .category-options {
+    top: 14%;  
+    right: 35%;  
+    transform: translateX(50);  
+    width: 5%; 
+    padding: 10px; 
+    max-height: 40%;  
+  }
+
+  .category-button {
+    width: 100%;
+    height: 100%;
+}
+
+  .category-button img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close-button {
+    width: 8px;
+    height: 8px;
+}
+
+  #left-image, #right-image {
+    display: none;
+  }
+
+  .button img {
+    display: none; 
+  }
+
+  .popup-content {
+    width: 45%; 
+    padding: 10px;
+    font-size: 10px; 
+  }
+
+  .popup-gif {
+    width: 40%; 
+  }
+
+  #popup-title {
+    font-size: 15px; 
+  }
+
+  #close-popup {
+    padding: 6px; 
+  }
+}
